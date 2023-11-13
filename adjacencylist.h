@@ -10,6 +10,8 @@ private:
     map<string, pair<double, vector<string>>> pagesOut;
 
 public:
+    AdjacencyList() {};
+    ~AdjacencyList() {};
     void insert(string from, string to);
     void PageRank(int n);
     void print();

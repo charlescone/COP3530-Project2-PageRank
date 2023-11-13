@@ -7,18 +7,19 @@
 #include "adjacencylist.h"
 
 int main() {
-    AdjacencyList pages;
+    AdjacencyList* pages = new AdjacencyList;
     int num, power;
     string from, to;
 
     cin >> num >> power;
     for (int i = 0; i < num; i++) {
         cin >> from >> to;
-        pages.insert(from, to);
+        pages->insert(from, to);
     }
 
-    pages.PageRank(power);
-    pages.print();
+    pages->PageRank(power);
+    pages->print();
 
+    delete pages;
     return 0;
 }
